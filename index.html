@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bus Ticket Booking System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-bus"></i>
+            BusBooking
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book Ticket</a></li>
+            <li><a href="#">Routes</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+        <button id="darkModeBtn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Book Your Journey With Comfort
+
+            </h1>
+
+            <p>
+
+                Safe • Fast • Affordable • Comfortable
+
+            </p>
+
+            <a href="#booking">
+
+                <button>
+
+                    Book Now
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section id="booking" class="container">
+
+            <!-- ================= BOOKING FORM ================= -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                    Passenger Details
+
+                </h2>
+
+                <!-- Passenger Name -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Passenger Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter Passenger Name">
+
+                </div>
+
+                <!-- Source -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Source
+
+                    </label>
+
+                    <select id="source">
+
+                        <option value="">Select Source</option>
+
+                        <option>Chennai</option>
+                        <option>Coimbatore</option>
+                        <option>Madurai</option>
+                        <option>Trichy</option>
+                        <option>Salem</option>
+                        <option>Nagapattinam</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Destination -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        Destination
+
+                    </label>
+
+                    <select id="destination">
+
+                        <option value="">Select Destination</option>
+
+                        <option>Chennai</option>
+                        <option>Coimbatore</option>
+                        <option>Madurai</option>
+                        <option>Trichy</option>
+                        <option>Salem</option>
+                        <option>Nagapattinam</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Bus Type -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-bus"></i>
+
+                        Bus Type
+
+                    </label>
+
+                    <select id="busType">
+
+                        <option value="">Select Bus Type</option>
+
+                        <option value="AC">AC</option>
+
+                        <option value="Non AC">Non AC</option>
+
+                        <option value="Sleeper">Sleeper</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Journey Date -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        Journey Date
+
+                    </label>
+
+                    <input type="date" id="journeyDate">
+
+                </div>
+
+                <!-- Seats -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        <i class="fa-solid fa-chair"></i>
+
+                        Number of Seats
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="seats"
+                        min="1"
+                        placeholder="Enter Number of Seats">
+
+                </div>
+
+            </div>
+
+            <!-- ================= SEAT SELECTION ================= -->
+
+            <div class="seat-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-couch"></i>
+
+                    Select Your Seat
+
+                </h2>
+
+                <div class="seat-container">
+                    <div class="seat" data-seat="A1">A1</div>
+                    <div class="seat" data-seat="A2">A2</div>
+                    <div class="seat" data-seat="A3">A3</div>
+                    <div class="seat" data-seat="A4">A4</div>
+                    <div class="seat" data-seat="B1">B1</div>
+                    <div class="seat" data-seat="B2">B2</div>
+                    <div class="seat" data-seat="B3">B3</div>
+                    <div class="seat" data-seat="B4">B4</div>
+                    <div class="seat" data-seat="C1">C1</div>
+                    <div class="seat" data-seat="C2">C2</div>
+                    <div class="seat" data-seat="C3">C3</div>
+                    <div class="seat" data-seat="C4">C4</div>
+                    <div class="seat" data-seat="D1">D1</div>
+                    <div class="seat" data-seat="D2">D2</div>
+                    <div class="seat" data-seat="D3">D3</div>
+                    <div class="seat" data-seat="D4">D4</div>
+                </div>
+
+        </section>
+        <!-- ================= PAYMENT SUMMARY ================= -->
+
+            <div class="payment-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    Payment Summary
+
+                </h2>
+
+                <div class="summary">
+
+                    <p>
+                        <span>Bus Type</span>
+                        <span id="summaryBusType">--</span>
+                    </p>
+
+                    <p>
+                        <span>Selected Seat</span>
+                        <span id="summarySeat">--</span>
+                    </p>
+
+                    <p>
+                        <span>Price / Seat</span>
+                        <span>₹450</span>
+                    </p>
+
+                    <p>
+                        <span>Total Amount</span>
+                        <span id="summaryAmount">₹0</span>
+                    </p>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button type="button" onclick="bookTicket()">
+
+                        <i class="fa-solid fa-ticket"></i>
+
+                        Book Ticket
+
+                    </button>
+
+                    <button type="button" onclick="resetForm()">
+
+                        <i class="fa-solid fa-rotate-right"></i>
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= TICKET SUMMARY ================= -->
+
+        <section class="ticket-section">
+
+            <div class="ticket-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                    Ticket Summary
+
+                </h2>
+
+                <div id="ticket">
+
+                    <p><strong>Passenger :</strong> --</p>
+
+                    <p><strong>Source :</strong> --</p>
+
+                    <p><strong>Destination :</strong> --</p>
+
+                    <p><strong>Bus Type :</strong> --</p>
+
+                    <p><strong>Journey Date :</strong> --</p>
+
+                    <p><strong>Seat Number :</strong> --</p>
+
+                    <p><strong>Seats :</strong> --</p>
+
+                    <p><strong>Price / Seat :</strong> ₹450</p>
+
+                    <p><strong>Total Amount :</strong> ₹0</p>
+
+                    <p><strong>Booking Date :</strong> --</p>
+
+                    <p><strong>Ticket Number :</strong> --</p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="toggleBtn"
+                    onclick="toggleTicket()">
+
+                    Hide Ticket
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+
+                    <i class="fa-solid fa-bus"></i>
+
+                    BusBooking
+
+                </h3>
+
+                <p>
+
+                    Travel Safe, Travel Smart.
+
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-ticket"></i>
+                    Booking
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    Contact
+                </a>
+
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 Bus Ticket Booking System |
+            Designed by <strong>Suganthi</strong>
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
